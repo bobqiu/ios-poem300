@@ -36,28 +36,28 @@ func createPoemAndSongs() -> Array<PoemAndSong> {
     pnsArr.append(p2)
 
     
-    let p3 = PoemAndSong(id: 3, type: 1, name: "清明", author: "杜牧", content: "清明時節雨紛紛，路上行人欲斷魂。借問酒家何處有，牧童遙指杏花村。")
+    let p3 = PoemAndSong(id: 3, type: 1, name: "清明", author: "杜牧", content: "清明時節雨紛紛，\n路上行人欲斷魂。\n借問酒家何處有，\n牧童遙指杏花村。")
     pnsArr.append(p3)
     
-    let p4 = PoemAndSong(id: 4, type: 2, name: "娃娃國", author: "", content: "娃娃國 娃娃兵 金髮藍眼睛 娃娃國王鬍鬚長 騎馬出王宮 娃娃兵 在演習 提防敵人攻 機關槍答答答 原子砲轟轟轟")
+    let p4 = PoemAndSong(id: 4, type: 2, name: "娃娃國", author: "", content: "娃娃國 娃娃兵 金髮藍眼睛\n 娃娃國王鬍鬚長 騎馬出王宮\n 娃娃兵 在演習 提防敵人攻\n 機關槍答答答 原子砲轟轟轟")
     pnsArr.append(p4)
     
-    let p5 = PoemAndSong(id: 5, type: 2, name: "三輪車 ", author: "", content: "三輪車 跑的快 上面坐著老太太 要五毛 給一塊 你說奇怪不奇怪")
+    let p5 = PoemAndSong(id: 5, type: 2, name: "三輪車 ", author: "", content: "三輪車 跑的快\n 上面坐著老太太\n 要五毛 給一塊\n 你說奇怪不奇怪")
     pnsArr.append(p5)
 
-    let p6 = PoemAndSong(id: 6, type: 2, name: "小星星", author: "", content: "一閃一閃亮晶晶 滿天都是小星星 掛在天上放光明 好像許多小眼睛 一閃一閃亮晶晶 滿天都是小星星")
+    let p6 = PoemAndSong(id: 6, type: 2, name: "小星星", author: "", content: "一閃一閃亮晶晶\n 滿天都是小星星\n 掛在天上放光明\n 好像許多小眼睛\n 一閃一閃亮晶晶\n 滿天都是小星星")
     pnsArr.append(p6)
     
     
     
-    let p7 = PoemAndSong(id: 7, type: 1, name: "旅宿", author: "杜牧", content: "旅館無良伴，凝情自悄然。寒燈思舊事，斷雁警愁眠。遠夢歸侵曉，家書到隔年。滄江好煙月，門繫釣魚船。")
+    let p7 = PoemAndSong(id: 7, type: 1, name: "旅宿", author: "杜牧", content: "旅館無良伴，凝情自悄然。\n寒燈思舊事，斷雁警愁眠。\n遠夢歸侵曉，家書到隔年。\n滄江好煙月，門繫釣魚船。")
     pnsArr.append(p7)
 
-    let p8 = PoemAndSong(id: 8, type: 1, name: "歲暮歸南山", author: "孟浩然", content: "北闕休上書，南山歸敝廬。不才明主棄，多病故人疏。白髮催年老，青陽逼歲除。永懷愁不寐，松月夜窗虛。")
+    let p8 = PoemAndSong(id: 8, type: 1, name: "歲暮歸南山", author: "孟浩然", content: "北闕休上書，南山歸敝廬。\n不才明主棄，多病故人疏。\n白髮催年老，青陽逼歲除。\n永懷愁不寐，松月夜窗虛。")
     pnsArr.append(p8)
     
     
-    let p9 = PoemAndSong(id: 9, type: 1, name: "溪居", author: "柳宗元", content: "久為簪組束，幸此南夷謫。閒依農圃鄰，偶似山林客。曉耕翻露草，夜傍響谿石。來往不逢人，長歌楚天碧。")
+    let p9 = PoemAndSong(id: 9, type: 1, name: "溪居", author: "柳宗元", content: "久為簪組束，幸此南夷謫。\n閒依農圃鄰，偶似山林客。\n曉耕翻露草，夜傍響谿石。\n來往不逢人，長歌楚天碧。")
     pnsArr.append(p9)
     
     
