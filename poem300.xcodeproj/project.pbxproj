@@ -13,6 +13,9 @@
 		6165E9751DA7647A005EC1CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6165E9731DA7647A005EC1CD /* Main.storyboard */; };
 		6165E9771DA7647A005EC1CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6165E9761DA7647A005EC1CD /* Assets.xcassets */; };
 		6165E97A1DA7647A005EC1CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6165E9781DA7647A005EC1CD /* LaunchScreen.storyboard */; };
+		61695D811DA955570062ECDD /* PoemAndSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61695D7F1DA955570062ECDD /* PoemAndSong.swift */; };
+		61695D821DA955570062ECDD /* PoemAndSongCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61695D801DA955570062ECDD /* PoemAndSongCreator.swift */; };
+		61A60C1E1DA96221007CDFF1 /* PoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A60C1D1DA96221007CDFF1 /* PoemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		6165E9761DA7647A005EC1CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6165E9791DA7647A005EC1CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6165E97B1DA7647A005EC1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61695D7F1DA955570062ECDD /* PoemAndSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemAndSong.swift; sourceTree = "<group>"; };
+		61695D801DA955570062ECDD /* PoemAndSongCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemAndSongCreator.swift; sourceTree = "<group>"; };
+		61A60C1D1DA96221007CDFF1 /* PoemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				6165E96D1DA7647A005EC1CD /* AppDelegate.swift */,
+				61A60C1D1DA96221007CDFF1 /* PoemViewController.swift */,
 				6165E96F1DA7647A005EC1CD /* FirstViewController.swift */,
 				6165E9711DA7647A005EC1CD /* SecondViewController.swift */,
 				6165E9731DA7647A005EC1CD /* Main.storyboard */,
 				6165E9761DA7647A005EC1CD /* Assets.xcassets */,
 				6165E9781DA7647A005EC1CD /* LaunchScreen.storyboard */,
+				61695D7F1DA955570062ECDD /* PoemAndSong.swift */,
+				61695D801DA955570062ECDD /* PoemAndSongCreator.swift */,
 				6165E97B1DA7647A005EC1CD /* Info.plist */,
 			);
 			path = poem300;
@@ -142,7 +151,10 @@
 			files = (
 				6165E9721DA7647A005EC1CD /* SecondViewController.swift in Sources */,
 				6165E96E1DA7647A005EC1CD /* AppDelegate.swift in Sources */,
+				61695D821DA955570062ECDD /* PoemAndSongCreator.swift in Sources */,
 				6165E9701DA7647A005EC1CD /* FirstViewController.swift in Sources */,
+				61695D811DA955570062ECDD /* PoemAndSong.swift in Sources */,
+				61A60C1E1DA96221007CDFF1 /* PoemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +316,7 @@
 				6165E9801DA7647A005EC1CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
