@@ -1,6 +1,22 @@
 import UIKit
 
 
+func getPoemByPoet(author: String) -> Array<PoemAndSong>{
+    
+    let allThings = createPoemAndSongs()
+    
+    var pnsArr: [PoemAndSong] = []
+    
+    
+    pnsArr = allThings.filter{ (x) -> Bool in
+        x.author == author
+        }
+    
+    return pnsArr
+    
+    
+}
+
 func getPoemOrSong(type: Int) -> Array<PoemAndSong>{
 
     let allThings = createPoemAndSongs()
@@ -17,10 +33,24 @@ func getPoemOrSong(type: Int) -> Array<PoemAndSong>{
         }
 
     }
-    
-    
     return pnsArr
 }
+
+
+func getPoets() -> Array<String>{
+    
+    let allThings: Array<PoemAndSong> = getPoemOrSong(type: 1)
+    
+    var theSet: Set<String> = Set<String>()
+  
+    for thePoem in allThings {
+        theSet.insert(thePoem.author!)
+    }
+    let poetArray : Array<String> = Array(theSet)
+    return poetArray
+}
+
+
 
 func createPoemAndSongs() -> Array<PoemAndSong> {
 
@@ -63,6 +93,19 @@ func createPoemAndSongs() -> Array<PoemAndSong> {
     
     let p10 = PoemAndSong(id: 10, type: 1, name: "望嶽", author: "杜甫", content: "岱宗夫如何，齊魯青未了。\n造化鍾神秀，陰陽割昏曉。\n盪胸生曾雲，決眥入歸鳥。\n會當凌絕頂，一覽眾山小。")
     pnsArr.append(p10)
+    
+    let p11 = PoemAndSong(id: 11, type: 1, name: "雜詩", author: "王維", content: "君自故鄉來，應知故鄉事。\n來日綺窗前，寒梅著花未？")
+    pnsArr.append(p11)
+    
+    
+    let p12 = PoemAndSong(id: 12, type: 1, name: "送友人", author: "李白", content: "青山橫北郭，白水繞東城。\n此地一為別，孤蓬萬里征。\n浮雲遊子意，落日故人情。\n揮手自茲去，蕭蕭班馬鳴。")
+    pnsArr.append(p12)
+    //王維
+    
+    let p13 = PoemAndSong(id: 13, type: 1, name: "留別王維", author: "孟浩然", content: "寂寂竟何待，朝朝空自歸。\n欲尋芳草去，惜與故人違。\n當路誰相假，知音世所稀。\n祗因守寂寞，還掩故園扉。")
+    pnsArr.append(p13)
+    
+    
     
     return pnsArr
 }

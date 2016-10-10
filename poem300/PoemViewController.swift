@@ -14,6 +14,7 @@ class PoemViewController: UIViewController {
     var poems : Array<PoemAndSong> = getPoemOrSong(type: 1)
     
     
+    @IBOutlet weak var navBarItem: UINavigationItem!
     
     @IBOutlet weak var textView: UITextView!
     
@@ -35,6 +36,7 @@ class PoemViewController: UIViewController {
             textView.text = thePoem.content
             nameLabel.text = thePoem.name
             author.text = thePoem.author
+            navBarItem.title = thePoem.name
         }
         
         

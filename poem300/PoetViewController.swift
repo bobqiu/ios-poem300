@@ -1,21 +1,17 @@
 //
-//  FirstViewController.swift
+//  PoetViewController.swift
 //  poem300
 //
-//  Created by hatoto on 2016/10/7.
+//  Created by hatoto on 2016/10/10.
 //  Copyright © 2016年 hatotoINC. All rights reserved.
 //
-
 import UIKit
 
-class FirstViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate{
+class PoetViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     
-    var poetToPass: String!
     
-    var poems : Array<PoemAndSong> = []
+    var poets : Array<String> = getPoets()
     
-    @IBOutlet weak var poetTitle: UINavigationItem!
-  
 
     
     // 設定表格只有一個區段
@@ -26,23 +22,21 @@ class FirstViewController: UIViewController ,UITableViewDataSource, UITableViewD
     // 設定表格的列數
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         //return balls.count
-        return poems.count
+        return poets.count
     }
     
     // 表格的儲存格設定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         // 設定儲存格的內容
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
-        cell.textLabel!.text = poems[indexPath.row].name!
-        cell.detailTextLabel!.text = poems[indexPath.row].author!
-        cell.tag = poems[indexPath.row].id
+        cell.textLabel!.text = poets[indexPath.row]
+        
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        poems = getPoemByPoet(author: poetToPass)
-        poetTitle.title = poetToPass
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -50,9 +44,9 @@ class FirstViewController: UIViewController ,UITableViewDataSource, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    var valueToPass:Int!
- 
+    
+    var poetToPass: String!
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.row)!")
         
@@ -60,18 +54,17 @@ class FirstViewController: UIViewController ,UITableViewDataSource, UITableViewD
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
         print("currentCell.tag: \(currentCell.tag):\(currentCell.textLabel!.text)")
-        valueToPass = currentCell.tag
-        performSegue(withIdentifier: "poem_se", sender: self)
+        poetToPass = currentCell.textLabel!.text
+        performSegue(withIdentifier: "poet_se", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if (segue.identifier == "poem_se") {
+        if (segue.identifier == "poet_se") {
             // initialize new view controller and cast it as your view controller
-            let viewController = segue.destination as! PoemViewController
+            let viewController = segue.destination as! FirstViewController
             // your new view controller should have property that will store passed value
-            viewController.passedValue = valueToPass
+            viewController.poetToPass = poetToPass
         }
     }
-
+    
 }
-

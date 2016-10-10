@@ -21,6 +21,7 @@ class SongViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     
+    @IBOutlet weak var navBarItem: UINavigationItem!
     
     
     override func viewDidLoad() {
@@ -33,7 +34,7 @@ class SongViewController: UIViewController {
             
             textView.text = thePoem.content
             nameLabel.text = thePoem.name
-
+            navBarItem.title = thePoem.name
         }
     }
     

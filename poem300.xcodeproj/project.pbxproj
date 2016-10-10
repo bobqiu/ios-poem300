@@ -17,6 +17,7 @@
 		61695D821DA955570062ECDD /* PoemAndSongCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61695D801DA955570062ECDD /* PoemAndSongCreator.swift */; };
 		61A60C1E1DA96221007CDFF1 /* PoemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A60C1D1DA96221007CDFF1 /* PoemViewController.swift */; };
 		61BC157B1DAABA5800600ED6 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC157A1DAABA5800600ED6 /* SongViewController.swift */; };
+		61DBAA4A1DABB24300232848 /* PoetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBAA491DABB24300232848 /* PoetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		61695D801DA955570062ECDD /* PoemAndSongCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemAndSongCreator.swift; sourceTree = "<group>"; };
 		61A60C1D1DA96221007CDFF1 /* PoemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoemViewController.swift; sourceTree = "<group>"; };
 		61BC157A1DAABA5800600ED6 /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
+		61DBAA491DABB24300232848 /* PoetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				61BC157A1DAABA5800600ED6 /* SongViewController.swift */,
+				61DBAA491DABB24300232848 /* PoetViewController.swift */,
 				6165E96D1DA7647A005EC1CD /* AppDelegate.swift */,
 				61A60C1D1DA96221007CDFF1 /* PoemViewController.swift */,
 				6165E96F1DA7647A005EC1CD /* FirstViewController.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				6165E9721DA7647A005EC1CD /* SecondViewController.swift in Sources */,
 				6165E96E1DA7647A005EC1CD /* AppDelegate.swift in Sources */,
+				61DBAA4A1DABB24300232848 /* PoetViewController.swift in Sources */,
 				61695D821DA955570062ECDD /* PoemAndSongCreator.swift in Sources */,
 				6165E9701DA7647A005EC1CD /* FirstViewController.swift in Sources */,
 				61695D811DA955570062ECDD /* PoemAndSong.swift in Sources */,
