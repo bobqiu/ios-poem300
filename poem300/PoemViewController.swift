@@ -26,10 +26,8 @@ class PoemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("passedValue: \(passedValue)")
         
         if let value = passedValue{
-            
             
             let thePoem : PoemAndSong =  poems.filter{ (x) -> Bool in x.id == value}.first!
             
@@ -39,15 +37,10 @@ class PoemViewController: UIViewController {
             navBarItem.title = thePoem.name
         }
         
-        
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    }
+}
 

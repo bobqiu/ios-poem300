@@ -9,9 +9,8 @@ import UIKit
 
 class PoetViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     
-    
+    /*  取得所有詩人名字的字串陣列  */
     var poets : Array<String> = getPoets()
-    
 
     
     // 設定表格只有一個區段
@@ -36,33 +35,32 @@ class PoetViewController: UIViewController ,UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    /* 要傳遞到下一個view的值 */
     var poetToPass: String!
     
+    /* table cell被點選時會執行的動作，在這邊把要傳出去的值指給中介變數poetToPass */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You selected cell #\(indexPath.row)!")
-        
-        // Get Cell Label
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-        print("currentCell.tag: \(currentCell.tag):\(currentCell.textLabel!.text)")
         poetToPass = currentCell.textLabel!.text
+        
+        /* performSegue 會執行Segue 導頁，執行時會呼叫prepare */
         performSegue(withIdentifier: "poet_se", sender: self)
     }
     
+    /* override prepare ，此method參數要寫成swift3 版本，不然會被判斷成不同method */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if (segue.identifier == "poet_se") {
-            // initialize new view controller and cast it as your view controller
+
             let viewController = segue.destination as! FirstViewController
-            // your new view controller should have property that will store passed value
+            /* FirstViewController 是目標View的Controller */
+            
             viewController.poetToPass = poetToPass
         }
     }

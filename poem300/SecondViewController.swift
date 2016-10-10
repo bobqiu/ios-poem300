@@ -9,12 +9,8 @@
 import UIKit
 
 class SecondViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    
     
     var poems = getPoemOrSong(type: 2)
-    
-    
     
     // 設定表格只有一個區段
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -23,7 +19,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     // 設定表格的列數
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        //return balls.count
+        //return poems.count
         return poems.count
     }
     
@@ -40,13 +36,12 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     var valueToPass:Int!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You selected cell #\(indexPath.row)!")
         
         // Get Cell Label
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-        print("currentCell.tag: \(currentCell.tag):\(currentCell.textLabel!.text)")
         valueToPass = currentCell.tag
+        
         performSegue(withIdentifier: "song_se", sender: self)
     }
     
@@ -62,12 +57,10 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 

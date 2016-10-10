@@ -7,7 +7,6 @@ func getPoemByPoet(author: String) -> Array<PoemAndSong>{
     
     var pnsArr: [PoemAndSong] = []
     
-    
     pnsArr = allThings.filter{ (x) -> Bool in
         x.author == author
         }
@@ -100,7 +99,7 @@ func createPoemAndSongs() -> Array<PoemAndSong> {
     
     let p12 = PoemAndSong(id: 12, type: 1, name: "送友人", author: "李白", content: "青山橫北郭，白水繞東城。\n此地一為別，孤蓬萬里征。\n浮雲遊子意，落日故人情。\n揮手自茲去，蕭蕭班馬鳴。")
     pnsArr.append(p12)
-    //王維
+
     
     let p13 = PoemAndSong(id: 13, type: 1, name: "留別王維", author: "孟浩然", content: "寂寂竟何待，朝朝空自歸。\n欲尋芳草去，惜與故人違。\n當路誰相假，知音世所稀。\n祗因守寂寞，還掩故園扉。")
     pnsArr.append(p13)

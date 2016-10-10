@@ -54,21 +54,20 @@ class FirstViewController: UIViewController ,UITableViewDataSource, UITableViewD
     var valueToPass:Int!
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You selected cell #\(indexPath.row)!")
         
         // Get Cell Label
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-        print("currentCell.tag: \(currentCell.tag):\(currentCell.textLabel!.text)")
+  
         valueToPass = currentCell.tag
         performSegue(withIdentifier: "poem_se", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if (segue.identifier == "poem_se") {
-            // initialize new view controller and cast it as your view controller
+
             let viewController = segue.destination as! PoemViewController
-            // your new view controller should have property that will store passed value
+
             viewController.passedValue = valueToPass
         }
     }

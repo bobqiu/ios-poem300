@@ -17,16 +17,13 @@ class SongViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     
-    
     @IBOutlet weak var nameLabel: UILabel!
-    
     
     @IBOutlet weak var navBarItem: UINavigationItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("passedValue: \(passedValue)")
         
         if let value = passedValue{
             
@@ -40,6 +37,5 @@ class SongViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
